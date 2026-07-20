@@ -9,7 +9,7 @@ const Profile = () => {
         width={300}
         height={300}
         alt="image"
-        src="/Profile.png"
+        src="/profile.png"
       />
     </div>
   );
