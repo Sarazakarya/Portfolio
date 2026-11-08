@@ -13,7 +13,7 @@ export const projectsData = [
     title: "Clinca",
     description: "blog website using Neextjs, MongoDb ,tailwind ,Shadn cn",
     image: "/clinca.png",
-    gitUrl: "https://github.com/Sarazakarya/Lamme",
+    gitUrl: "https://github.com/Sarazakarya/Clinica",
     previewUrl: "https://clinica-kohl-six.vercel.app/",
   },
   {
