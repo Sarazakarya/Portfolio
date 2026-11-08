@@ -49,14 +49,16 @@ const HeroSection = () => {
             HIRE ME
           </Link>
 
-          <Link
-            href={"/"}
-            className=" inline-block sm:w-fit px-1 py-1 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 text-white "
+          <a
+            href="https://drive.google.com/uc?export=download&id=1XlAfLjfDmoFYb4xhI21YdAtQVMF7D2ag"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block sm:w-fit px-1 py-1 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 text-white"
           >
             <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
               Download CV
             </span>
-          </Link>
+          </a>
         </div>
 
         <div className="col-span-1 sm:col-span-4 flex justify-center sm:justify-end">
