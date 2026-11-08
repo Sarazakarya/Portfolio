@@ -16,9 +16,8 @@ export const socials = [
   },
   {
     icon: FaLinkedin,
-    href: "https://linkedin.com/in/yourprofile",
+    href: "https://www.linkedin.com/in/sara-zakarya-7b1330232/",
     label: "LinkedIn",
     targt: "_blank",
   },
- 
 ];
