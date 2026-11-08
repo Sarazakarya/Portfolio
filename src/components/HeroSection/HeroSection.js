@@ -1,16 +1,27 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Profile from "./Profile/Profile";
+import gsap from "gsap";
 
 const HeroSection = () => {
+  const heroRef = useRef(null);
+  useEffect(() => {
+    gsap.from(heroRef.current.children, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      stagger: 0.3,
+      ease: "power3.out",
+    });
+  }, []);
   return (
-    <section>
+    <section ref={heroRef}>
       <div className="grid grid-cols-1 sm:grid-cols-12 items-center gap-10 my-10">
         <div className="col-span-1 sm:col-span-8 text-center sm:text-left">
           <h1 className="text-background mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-pink-500 to-purple-500">
               {" "}
               Hi I`m
             </span>
@@ -25,9 +36,9 @@ const HeroSection = () => {
 
           <p className="text-ring text-base sm:text-lg mb-6 lg:text-xl">
             Computer and Information Science graduate and Frontend Developer
-            specializing in React , Next js  and modern web technologies. Dedicated to
-            building high-performance, responsive web applications with clean,
-            scalable
+            specializing in React , Next js and modern web technologies.
+            Dedicated to building high-performance, responsive web applications
+            with clean, scalable
           </p>
 
           {/* Links */}

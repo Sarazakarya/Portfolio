@@ -1,10 +1,31 @@
+"use client";
 import Image from "next/image";
-import React from "react";
 import { TabsDemo } from "./Tabs/Tabs";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const About = () => {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(aboutRef.current.children, {
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      stagger: 0.3,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: aboutRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+  }, []);
   return (
-    <section className="text-white my-10" id="about">
+    <section ref={aboutRef} className="text-white my-10" id="about">
       <div className="md:grid md:grid-cols-2  items-center  sm:gap-8  xl:gap-16 sm:py-16 ">
         <Image src={"/about-image.png"} width={500} height={500} />
 
