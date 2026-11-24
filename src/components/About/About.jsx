@@ -27,7 +27,12 @@ const About = () => {
   return (
     <section ref={aboutRef} className="text-white my-10" id="about">
       <div className="md:grid md:grid-cols-2  items-center  sm:gap-8  xl:gap-16 sm:py-16 ">
-        <Image src={"/about-image.png"} width={500} height={500} />
+        <Image
+          src={"/about-image.png"}
+          width={500}
+          height={500}
+          alt="about-image"
+        />
 
         {/*Right */}
         <div className="sm:text-left text-center flex flex-col gap-10 my-10">

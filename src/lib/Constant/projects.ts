@@ -18,6 +18,15 @@ export const projectsData = [
   },
   {
     id: 3,
+    title: "HandMade Website",
+    description:
+      "In Progress... A responsive e-commerce website for handmade crochet products, featuring product search, filtering, product details, and a filterable blog. Built with Next.js, TypeScript, Tailwind CSS, and TanStack React Query, following Atomic Design and feature-based architecture.",
+    image: "/handmade.png",
+    gitUrl: "https://github.com/Sarazakarya/Handmade",
+    previewUrl: "https://handmade-drab.vercel.app/",
+  },
+  {
+    id: 4,
     title: "blog  Website",
     description:
       "Built a multi-page business website using Next.js and TypeScript, including Home, Portfolio, Blog, About, Contact, and Dashboard using Neextjs, MongoDb ,tailwind ,Shadn cn",
@@ -27,7 +36,7 @@ export const projectsData = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Fitness  Website",
     description:
       " Developed a Fitness App using React, Tailwind CSS, and Shadcn UI to manage platform data and operations efficiently Handled global state using Redux Toolkit for seamless data flow across complex data management features",
@@ -37,7 +46,7 @@ export const projectsData = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "Grocery E-Commerce Platform",
     description:
       "Collaborated within a development team to build a high-performance grocery e-commerce platform using React,",
@@ -46,7 +55,7 @@ export const projectsData = [
     previewUrl: "https://grocery-r10-team-3.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Caffe  Platform",
     description:
       "A responsive single-page Café website showcasing a modern design, smooth user experience, and reusable UI components.",

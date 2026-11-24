@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import {
@@ -52,12 +52,15 @@ export function CardImage() {
     };
   }, []);
 
+  const [open, setOpen] = useState(6);
+  const sliced = projectsData.slice(0, open);
+
   return (
     <div
       ref={cardsRef}
       className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10"
     >
-      {projectsData.map((ele) => (
+      {sliced.map((ele) => (
         <Card
           key={ele.id}
           className="project-card relative mx-auto w-full max-w-sm pt-0 border border-gray-200/10 shadow-lg bg-foreground overflow-hidden group"
@@ -94,6 +97,17 @@ export function CardImage() {
           </CardHeader>
         </Card>
       ))}
+      {sliced.length < projectsData.length && (
+        <div className="col-span-full flex justify-center mt-10">
+          <button
+            type="button"
+            onClick={() => setOpen((prev) => prev + 3)}
+            className="col-span-full  mx-auto rounded-full bg-purple-500 hover:bg-purple-600 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </div>
   );
 }
